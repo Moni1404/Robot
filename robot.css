@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    background-color: black;
+  }
+  
+  h1 {
+    text-align: center;
+    color: red;
+  }
+  .head,
+  .left-hand,
+  .face,
+  .right-hand,
+  .leg1,
+  .leg2{
+    background-color: gold;
+  }
+  
+  .head {
+    width:140px;
+    margin: 0 auto;
+    height: 120px;
+    border-radius: 200px 200px 0 0;
+    margin-bottom: 10px;
+  }
+  
+  .eyes {
+    position: relative;
+    top: 80px;
+  }
+  .eye1{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: blue;
+    display: inline-block;
+    margin-left: 30px;
+   
+  }
+  .eye2 {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: blue;
+    display: inline-block;
+    margin-left: 100px;
+  }
+  .eye2{
+    top: -20px; 
+  }
+  .top {
+    width: 220px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .left-hand{
+    width: 40px;
+    height: 125px;
+    border-radius: 100px;
+    margin-top: 20px;
+  }
+  .right-hand {
+    width: 40px;
+    height: 125px;
+    border-radius: 100px;
+    margin-top: 20px;
+  }
+  
+  
+  .left-hand {
+    margin-right: 10px;
+  }
+  
+  .right-hand {
+    margin-left: 10px;
+  }
+  
+  .face {
+    width: 200px;
+    height: 180px;
+    border-radius: 0 0 50px 50px;
+    transition: border-radius 1s;
+  }
+  
+  .bottom {
+    width: 200px;
+    height: 180px;
+    margin: 0 auto;
+  }
+  
+  .leg1{
+    width: 40px;
+    height: 120px;
+    border-radius: 100px 100px 100px 100px;
+    display: inline-block;
+  }
+  .leg2 {
+    width: 40px;
+    height: 120px;
+    border-radius: 100px 100px 100px 100px;
+    display: inline-block;
+  }
+  
+  .leg1 {
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+  
+  .leg2 {
+    margin-left: 40px;
+  }
+  
+  .robot:hover .head {
+    animation: movehead infinite;
+  }
+  
+  .robot:hover .face{
+    border-radius: 40%;
+    animation: moveface 2s infinite;
+  }
+  
+  .robot:hover .left-hand {
+    animation: moveleft-hand 2s infinite;
+  }
+  
+  .robot:hover .right-hand {
+    animation: moveright-hand 2s infinite;
+  }
+  
+  .robot:hover .leg1 {
+    animation: moveleg1 2s infinite;
+  }
+  
+  .robot:hover .leg2 {
+    animation: moveleg2 2s infinite;
+  }
+  @keyframes movehead {
+    0% {
+      width: 200px;
+    }
+  
+    25% {
+      width: 300px;
+    }
+  
+    50% {
+      width: 200px;
+    }
+  
+    75% {
+      width: 300px;
+    }
+  
+    100% {
+      width: 200px;
+    }
+  }
+    @keyframes moveleft-hand {
+    0% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    25% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+    }
+  
+    50% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    75% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  }
+   @keyframes moveright-hand {
+    0% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    25% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+    }
+  
+    50% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    75% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  }
+  @keyframes moveleg1 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(20deg);
+    }
+  
+    50% {
+      transform: rotate(0deg);
+    }
+  
+    75% {
+      transform: rotate(20deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes moveleg2 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-20deg);
+    }
+  
+    50% {
+      transform: rotate(0deg);
+    }
+  
+    75% {
+      transform: rotate(-20deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+   @keyframes moveface {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
